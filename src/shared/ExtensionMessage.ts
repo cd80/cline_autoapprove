@@ -16,6 +16,7 @@ export interface ExtensionMessage {
 		| "invoke"
 		| "partialMessage"
 		| "openRouterModels"
+		| "autoApproveSettings" // Added this line
 	text?: string
 	action?: "chatButtonClicked" | "settingsButtonClicked" | "historyButtonClicked" | "didBecomeVisible"
 	invoke?: "sendMessage" | "primaryButtonClick" | "secondaryButtonClick"

@@ -5,6 +5,7 @@ export interface WebviewMessage {
 		| "apiConfiguration"
 		| "customInstructions"
 		| "alwaysAllowReadOnly"
+		| "autoApproveSettings" // Added this line
 		| "webviewDidLaunch"
 		| "newTask"
 		| "askResponse"
@@ -28,6 +29,11 @@ export interface WebviewMessage {
 	apiConfiguration?: ApiConfiguration
 	images?: string[]
 	bool?: boolean
+	// Added settings field for auto-approve feature
+	settings?: {
+		autoApproveValue?: number
+		isAutoApproveByHours?: boolean
+	}
 }
 
 export type ClineAskResponse = "yesButtonClicked" | "noButtonClicked" | "messageResponse"
